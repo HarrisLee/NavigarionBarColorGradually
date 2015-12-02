@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44FB03BC1C0E8CDC00647DE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03BB1C0E8CDC00647DE4 /* main.m */; };
+		44FB03BF1C0E8CDC00647DE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03BE1C0E8CDC00647DE4 /* AppDelegate.m */; };
+		44FB03C21C0E8CDC00647DE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03C11C0E8CDC00647DE4 /* ViewController.m */; };
+		44FB03C51C0E8CDC00647DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FB03C31C0E8CDC00647DE4 /* Main.storyboard */; };
+		44FB03C71C0E8CDC00647DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FB03C61C0E8CDC00647DE4 /* Assets.xcassets */; };
+		44FB03CA1C0E8CDC00647DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FB03C81C0E8CDC00647DE4 /* LaunchScreen.storyboard */; };
+		44FB03D31C0E8CE900647DE4 /* SNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03D21C0E8CE900647DE4 /* SNNavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		44FB03B71C0E8CDC00647DE4 /* NavigarionBarColorGradually.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigarionBarColorGradually.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44FB03BB1C0E8CDC00647DE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44FB03BD1C0E8CDC00647DE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		44FB03BE1C0E8CDC00647DE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		44FB03C01C0E8CDC00647DE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44FB03C11C0E8CDC00647DE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		44FB03C41C0E8CDC00647DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44FB03C61C0E8CDC00647DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44FB03C91C0E8CDC00647DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44FB03CB1C0E8CDC00647DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FB03D11C0E8CE900647DE4 /* SNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNNavigationController.h; sourceTree = "<group>"; };
+		44FB03D21C0E8CE900647DE4 /* SNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNNavigationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44FB03B41C0E8CDC00647DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44FB03AE1C0E8CDC00647DE4 = {
+			isa = PBXGroup;
+			children = (
+				44FB03B91C0E8CDC00647DE4 /* NavigarionBarColorGradually */,
+				44FB03B81C0E8CDC00647DE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44FB03B81C0E8CDC00647DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44FB03B71C0E8CDC00647DE4 /* NavigarionBarColorGradually.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44FB03B91C0E8CDC00647DE4 /* NavigarionBarColorGradually */ = {
+			isa = PBXGroup;
+			children = (
+				44FB03BD1C0E8CDC00647DE4 /* AppDelegate.h */,
+				44FB03BE1C0E8CDC00647DE4 /* AppDelegate.m */,
+				44FB03C01C0E8CDC00647DE4 /* ViewController.h */,
+				44FB03C11C0E8CDC00647DE4 /* ViewController.m */,
+				44FB03D11C0E8CE900647DE4 /* SNNavigationController.h */,
+				44FB03D21C0E8CE900647DE4 /* SNNavigationController.m */,
+				44FB03C31C0E8CDC00647DE4 /* Main.storyboard */,
+				44FB03C61C0E8CDC00647DE4 /* Assets.xcassets */,
+				44FB03C81C0E8CDC00647DE4 /* LaunchScreen.storyboard */,
+				44FB03CB1C0E8CDC00647DE4 /* Info.plist */,
+				44FB03BA1C0E8CDC00647DE4 /* Supporting Files */,
+			);
+			path = NavigarionBarColorGradually;
+			sourceTree = "<group>";
+		};
+		44FB03BA1C0E8CDC00647DE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44FB03BB1C0E8CDC00647DE4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44FB03B61C0E8CDC00647DE4 /* NavigarionBarColorGradually */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44FB03CE1C0E8CDC00647DE4 /* Build configuration list for PBXNativeTarget "NavigarionBarColorGradually" */;
+			buildPhases = (
+				44FB03B31C0E8CDC00647DE4 /* Sources */,
+				44FB03B41C0E8CDC00647DE4 /* Frameworks */,
+				44FB03B51C0E8CDC00647DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavigarionBarColorGradually;
+			productName = NavigarionBarColorGradually;
+			productReference = 44FB03B71C0E8CDC00647DE4 /* NavigarionBarColorGradually.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44FB03AF1C0E8CDC00647DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = JianRongCao;
+				TargetAttributes = {
+					44FB03B61C0E8CDC00647DE4 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4UC89CVV3Y;
+					};
+				};
+			};
+			buildConfigurationList = 44FB03B21C0E8CDC00647DE4 /* Build configuration list for PBXProject "NavigarionBarColorGradually" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44FB03AE1C0E8CDC00647DE4;
+			productRefGroup = 44FB03B81C0E8CDC00647DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44FB03B61C0E8CDC00647DE4 /* NavigarionBarColorGradually */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44FB03B51C0E8CDC00647DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FB03CA1C0E8CDC00647DE4 /* LaunchScreen.storyboard in Resources */,
+				44FB03C71C0E8CDC00647DE4 /* Assets.xcassets in Resources */,
+				44FB03C51C0E8CDC00647DE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44FB03B31C0E8CDC00647DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FB03D31C0E8CE900647DE4 /* SNNavigationController.m in Sources */,
+				44FB03C21C0E8CDC00647DE4 /* ViewController.m in Sources */,
+				44FB03BF1C0E8CDC00647DE4 /* AppDelegate.m in Sources */,
+				44FB03BC1C0E8CDC00647DE4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44FB03C31C0E8CDC00647DE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44FB03C41C0E8CDC00647DE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44FB03C81C0E8CDC00647DE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44FB03C91C0E8CDC00647DE4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44FB03CC1C0E8CDC00647DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		44FB03CD1C0E8CDC00647DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44FB03CF1C0E8CDC00647DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NavigarionBarColorGradually/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suning.smarthome.NavigarionBarColorGradually;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44FB03D01C0E8CDC00647DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NavigarionBarColorGradually/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suning.smarthome.NavigarionBarColorGradually;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44FB03B21C0E8CDC00647DE4 /* Build configuration list for PBXProject "NavigarionBarColorGradually" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44FB03CC1C0E8CDC00647DE4 /* Debug */,
+				44FB03CD1C0E8CDC00647DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44FB03CE1C0E8CDC00647DE4 /* Build configuration list for PBXNativeTarget "NavigarionBarColorGradually" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44FB03CF1C0E8CDC00647DE4 /* Debug */,
+				44FB03D01C0E8CDC00647DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44FB03AF1C0E8CDC00647DE4 /* Project object */;
+}
