@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SNNavigationController.h"
+#import "PopViewController.h"
 
 @interface ViewController ()<UIScrollViewDelegate>
 
@@ -31,6 +32,18 @@
         [scrollView addSubview:line];
     }
     [self.view addSubview:scrollView];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    button.frame = CGRectMake(0, 0, 100, 50);
+    [button addTarget:self action:@selector(pushDirectionToNextView:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:button];
+}
+
+- (void)pushDirectionToNextView:(UIButton *)sender
+{
+    PopViewController *pop = [[PopViewController alloc] init];
+    pop.title = @"POP按钮使用";
+    [self.navigationController pushViewController:pop animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

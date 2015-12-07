@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44228ED01C1526E1005ED2C0 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44228ECF1C1526E1005ED2C0 /* PopViewController.m */; };
+		44228ED31C152F37005ED2C0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44228ED21C152F37005ED2C0 /* BaseViewController.m */; };
 		44FB03BC1C0E8CDC00647DE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03BB1C0E8CDC00647DE4 /* main.m */; };
 		44FB03BF1C0E8CDC00647DE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03BE1C0E8CDC00647DE4 /* AppDelegate.m */; };
 		44FB03C21C0E8CDC00647DE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB03C11C0E8CDC00647DE4 /* ViewController.m */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44228ECD1C151E8B005ED2C0 /* SNNavigationControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNNavigationControllerProtocol.h; sourceTree = "<group>"; };
+		44228ECE1C1526E1005ED2C0 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		44228ECF1C1526E1005ED2C0 /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
+		44228ED11C152F37005ED2C0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		44228ED21C152F37005ED2C0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		44FB03B71C0E8CDC00647DE4 /* NavigarionBarColorGradually.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigarionBarColorGradually.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FB03BB1C0E8CDC00647DE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44FB03BD1C0E8CDC00647DE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +72,9 @@
 				44FB03BE1C0E8CDC00647DE4 /* AppDelegate.m */,
 				44FB03C01C0E8CDC00647DE4 /* ViewController.h */,
 				44FB03C11C0E8CDC00647DE4 /* ViewController.m */,
+				44228ECE1C1526E1005ED2C0 /* PopViewController.h */,
+				44228ECF1C1526E1005ED2C0 /* PopViewController.m */,
+				44228ECD1C151E8B005ED2C0 /* SNNavigationControllerProtocol.h */,
 				44FB03D11C0E8CE900647DE4 /* SNNavigationController.h */,
 				44FB03D21C0E8CE900647DE4 /* SNNavigationController.m */,
 				44FB03C31C0E8CDC00647DE4 /* Main.storyboard */,
@@ -72,6 +82,8 @@
 				44FB03C81C0E8CDC00647DE4 /* LaunchScreen.storyboard */,
 				44FB03CB1C0E8CDC00647DE4 /* Info.plist */,
 				44FB03BA1C0E8CDC00647DE4 /* Supporting Files */,
+				44228ED11C152F37005ED2C0 /* BaseViewController.h */,
+				44228ED21C152F37005ED2C0 /* BaseViewController.m */,
 			);
 			path = NavigarionBarColorGradually;
 			sourceTree = "<group>";
@@ -156,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FB03D31C0E8CE900647DE4 /* SNNavigationController.m in Sources */,
+				44228ED31C152F37005ED2C0 /* BaseViewController.m in Sources */,
+				44228ED01C1526E1005ED2C0 /* PopViewController.m in Sources */,
 				44FB03C21C0E8CDC00647DE4 /* ViewController.m in Sources */,
 				44FB03BF1C0E8CDC00647DE4 /* AppDelegate.m in Sources */,
 				44FB03BC1C0E8CDC00647DE4 /* main.m in Sources */,
@@ -305,6 +319,7 @@
 				44FB03D01C0E8CDC00647DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

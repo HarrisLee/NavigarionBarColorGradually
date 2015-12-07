@@ -7,6 +7,24 @@
 //
 
 #import "SNNavigationController.h"
+#import "SNNavigationControllerProtocol.h"
+
+
+
+@interface UINavigationController (UINavigationControllerItemAction)
+
+- (BOOL)navigationBar:(UINavigationBar*)navigationBar shouldPopItem:(UINavigationItem*)item;
+
+@end
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wincomplete-implementation"
+@implementation UINavigationController (UINavigationControllerItemAction)
+
+@end
+#pragma clang diagnostic pop
+
+
 
 @interface SNNavigationController ()
 
@@ -22,6 +40,37 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+/**
+ *  在Navigation点击返回按钮返回到上一个页面时，会调用此方法，从写这个方法可以加入我们的处理过程。
+ *
+ *  @param navigationBar 导航栏
+ *  @param item          点击的NavigationItem
+ *
+ *  @return 是否继续调用系统的返回事件。
+ */
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item
+{
+    UIViewController *viewController = self.topViewController;
+
+    if (item != viewController.navigationItem) {
+        return [super navigationBar:navigationBar shouldPopItem:item];
+    }
+    
+    if ([viewController conformsToProtocol:@protocol(SNNavigationControllerProtocol)]) {
+        if ([(id<SNNavigationControllerProtocol>)viewController sn_navigationControllerPopWhenSystembackPopSelected:self]) {
+            return [super navigationBar:navigationBar shouldPopItem:item];
+        }
+        //将item的点击效果去除
+        [item setHidesBackButton:YES];
+        [item setHidesBackButton:NO];
+        return NO;
+    }
+    
+    return [super navigationBar:navigationBar shouldPopItem:item];
 }
 
 - (void)setProgress:(CGFloat)progress
