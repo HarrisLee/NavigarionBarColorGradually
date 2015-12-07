@@ -8,11 +8,14 @@
 
 #import "PopViewController.h"
 #import "SNNavigationControllerProtocol.h"
+#import "TableViewModel.h"
 
 @interface PopViewController ()<SNNavigationControllerProtocol>
 {
     UISwitch *switchView;
     BOOL showAlert;
+    UITableView *tables;
+    TableViewModel *model;
 }
 @end
 
@@ -29,6 +32,24 @@
     
 //    //使用自定义的Button返回时，则不会调用 - (BOOL)navigationBar:navigationBar shouldPopItem:item
 //    [self setLeftItem];
+    
+    
+    
+    //tableView的数据逻辑独立出ViewController，增加代码可读性
+    model = [[TableViewModel alloc] init];
+    NSArray *array = @[@{@"name":@"张1"},@{@"name":@"张2"},@{@"name":@"张3"},@{@"name":@"张4"},@{@"name":@"张5"},@{@"name":@"张6"},@{@"name":@"张7"},@{@"name":@"张8"},@{@"name":@"张9"},@{@"name":@"张10"}];
+    model.items = [NSMutableArray arrayWithArray:array];
+    tables = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 300) style:UITableViewStylePlain];
+    tables.delegate = model;
+    tables.dataSource = model;
+    [self.view addSubview:tables];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"pop appear");
 }
 
 - (void)back_rootView:(UIButton *)sender

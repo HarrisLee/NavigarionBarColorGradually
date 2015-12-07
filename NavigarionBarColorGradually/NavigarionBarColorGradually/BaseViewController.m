@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <objc/runtime.h>
 
 @interface BaseViewController ()
 
@@ -14,10 +15,34 @@
 
 @implementation BaseViewController
 
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        Class selfClass = [self class];
+        Method orignalMethod = class_getInstanceMethod(selfClass, @selector(viewDidAppear:));
+        Method swizzingMethod = class_getInstanceMethod(selfClass, @selector(sn_viewDidAppear:));
+        
+        BOOL isAddSuccess = class_addMethod(selfClass, @selector(viewDidAppear:), method_getImplementation(swizzingMethod), method_getTypeEncoding(swizzingMethod));
+        if (isAddSuccess) {
+            class_replaceMethod(selfClass, @selector(sn_viewDidAppear:), method_getImplementation(orignalMethod), method_getTypeEncoding(orignalMethod));
+        } else {
+            method_exchangeImplementations(orignalMethod, swizzingMethod);
+        }
+    });
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)sn_viewDidAppear:(BOOL)animation
+{
+    [self sn_viewDidAppear:animation];
+    NSLog(@"viewdid  ---  %@",self);
 }
 
 - (void)setLeftItem

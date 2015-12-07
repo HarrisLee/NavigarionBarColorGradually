@@ -8,7 +8,7 @@
 
 #import "SNNavigationController.h"
 #import "SNNavigationControllerProtocol.h"
-
+#import <objc/runtime.h>
 
 
 @interface UINavigationController (UINavigationControllerItemAction)
@@ -32,6 +32,54 @@
 
 @implementation SNNavigationController
 
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        Class class = [self class];
+        Method orignalMethod = class_getInstanceMethod(class, @selector(navigationBar:shouldPopItem:));
+        Method swzzingMethod = class_getInstanceMethod(class, @selector(sn_navigationBar:shouldPopItem:));
+        
+        BOOL addMethod = class_addMethod(class, @selector(navigationBar:shouldPopItem:), method_getImplementation(swzzingMethod), method_getTypeEncoding(swzzingMethod));
+        if (addMethod) {
+            class_replaceMethod(class, @selector(sn_navigationBar:shouldPopItem:), method_getImplementation(orignalMethod), method_getTypeEncoding(orignalMethod));
+        } else {
+            method_exchangeImplementations(orignalMethod, swzzingMethod);
+        }
+    });
+}
+
+/**
+ *  在Navigation点击返回按钮返回到上一个页面时，会调用此方法，从写这个方法可以加入我们的处理过程。
+ *  通过Runtime method Swzzing的方式，在不破坏原来的逻辑的基础上修改pop方法
+ *
+ *  @param navigationBar 导航栏
+ *  @param item          点击的NavigationItem
+ *
+ *  @return 是否继续调用系统的返回事件。
+ */
+- (BOOL)sn_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item
+{
+    UIViewController *viewController = self.topViewController;
+    
+    if (item != viewController.navigationItem) {
+        return [super navigationBar:navigationBar shouldPopItem:item];
+    }
+    
+    if ([viewController conformsToProtocol:@protocol(SNNavigationControllerProtocol)]) {
+        if ([(id<SNNavigationControllerProtocol>)viewController sn_navigationControllerPopWhenSystembackPopSelected:self]) {
+            return [super navigationBar:navigationBar shouldPopItem:item];
+        }
+        //将item的点击效果去除
+        [item setHidesBackButton:YES];
+        [item setHidesBackButton:NO];
+        return NO;
+    }
+    
+    return [super navigationBar:navigationBar shouldPopItem:item];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -46,6 +94,7 @@
 
 /**
  *  在Navigation点击返回按钮返回到上一个页面时，会调用此方法，从写这个方法可以加入我们的处理过程。
+ *  通过协议的方式，在不破坏原来的逻辑的基础上修改pop方法
  *
  *  @param navigationBar 导航栏
  *  @param item          点击的NavigationItem
